@@ -59,3 +59,21 @@
 ;;        (if x 't
 ;;            (equal (if x y z)
 ;;                   z)))
+
+;; SIZE
+
+;; (dethhm natp/size (x)
+;;         (equal (natp (size x))
+;;                't))
+
+;; (dethm size/car (x)
+;;        (if (atom x)
+;;            't
+;;            (equal (< (size (car x)) (size x))
+;;                   't)))
+
+;; (dethm size/cdr (x)
+;;        (if (atom x)
+;;            't
+;;            (equal (< (size (cdr x)) (size x))
+;;                   't)))
